@@ -1,8 +1,8 @@
-server:
-  ssl:
-    key-alias: spring-https
-    key-store: classpath:sivak.jks
-    key-store-type: JKS
-    key-password: password
-
-  port: 7777
+#server:
+#  ssl:
+#    key-alias: spring-https
+#    key-store: classpath:sivak.jks
+#    key-store-type: JKS
+#    key-password: password
+#
+#  port: 7777
