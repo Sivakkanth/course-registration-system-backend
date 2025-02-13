@@ -1,12 +1,12 @@
-server:
-  ssl:
-    key-alias: spring-https
-    key-store: classpath:sivak.jks
-    key-store-type: JKS
-    key-password: password
-
-  port: 7777
-
-spring:
-  main:
-    allow-circular-references: true
+#server:
+#  ssl:
+#    key-alias: spring-https
+#    key-store: classpath:sivak.jks
+#    key-store-type: JKS
+#    key-password: password
+#
+#  port: 7777
+#
+#spring:
+#  main:
+#    allow-circular-references: true
