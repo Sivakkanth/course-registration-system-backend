@@ -1,6 +1,6 @@
 package com.example.Couse.Registration.and.System.repository;
 
-import com.example.Couse.Registration.and.System.model.User;
+import com.example.Couse.Registration.and.System.authentication.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -11,6 +11,14 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
 
-    @Query("SELECT u FROM User u WHERE (u.emailId = :emailId OR u.username = :username) AND u.password = :password")
-    User findByUsernameOrEmailWithPassword(String emailId, String username, String password);
+//    @Query("SELECT u FROM User u WHERE (u.emailId = :emailId)")
+    Optional<User> findByEmailId(String emailId);
+
+//    @Query("SELECT * FROM user WHERE")
+//    User findUser(String username);
+
+    @Query("SELECT u FROM User u WHERE (u.username = :username)")
+    User findUser(String username);
+
+    boolean existsByEmailId(String emailId);
 }
